@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
     screens: {
       sm: "480px",
@@ -9,6 +12,18 @@ export default {
       xl: "1440px",
     },
     colors: {
+      coral: "#FF6F61",
+      "golden-yellow": "#FFD700",
+      "light-green": "#4CAF50",
+      "bright-blue": "#2196F3",
+      "bright-orange": "#FF9800",
+      "dark-navy": "#0D1B2A",
+      "dark-blue": "#1B263B",
+      "gray-blue": "#415A77",
+      "carbon-black": "#212121",
+      "dark-gray": "#3E4C59",
+      "light-gray": "#E0E0E0",
+
       blue: "#1fb6ff",
       purple: "#7e5bef",
       pink: "#ff49db",
@@ -33,5 +48,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
